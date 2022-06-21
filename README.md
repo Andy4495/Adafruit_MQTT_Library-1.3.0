@@ -1,4 +1,4 @@
-# Adafruit MQTT Library [![Build Status](https://github.com/adafruit/Adafruit_MQTT_Library/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_MQTT_Library/actions)
+# Adafruit MQTT Library
 
 ---
 
@@ -6,7 +6,7 @@ This is a clone, not a fork, of the [Adafruit MQTT Library][MQTT]. It is based o
 
 In file Adafruit_MQTT.cpp, lines 443 - 449 are commented out, because the MSP430 compiler does not support the `atof()` function.
 
-In addition, this README was updated to resolve issues flagged by [markdownlint][Lint].
+In addition, this README was updated to resolve issues flagged by [markdownlint][Lint], and to remove the build status badge.
 
 [MQTT]: https://github.com/adafruit/Adafruit_MQTT_Library
 [Lint]: https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
