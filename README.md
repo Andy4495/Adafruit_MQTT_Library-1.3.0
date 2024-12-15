@@ -4,7 +4,10 @@
 
 This is a clone, not a fork, of the [Adafruit MQTT Library][MQTT]. It is based on version 1.3.0 of the library with the following changes:
 
-In file Adafruit_MQTT.cpp, lines 443 - 449 are commented out, because the MSP430 compiler does not support the `atof()` function.
+Adafruit_MQTT.cpp:
+
+- Lines 443 - 449 are commented out, because the MSP430 compiler does not support the `atof()` function
+- Added `#include "itoa.h"` because the MSP430 platform v3.0.0 no longer includes these declarations in `stdlib.h`
 
 In addition, this README was updated to resolve issues flagged by [markdownlint][Lint], and to remove the build status badge.
 
@@ -39,21 +42,21 @@ Future todos:
 
 ## Compatibility
 
-MCU                | Tested Works | Doesn't Work | Not Tested  | Notes
------------------- | :----------: | :----------: | :---------: | -----
-Atmega328 @ 16MHz  |             |             |     X       |
-Atmega328 @ 12MHz  |             |             |     X       |
-Atmega32u4 @ 16MHz |             |             |     X       |
-Atmega32u4 @ 8MHz  |             |             |     X       |
-ESP8266            |             |             |     X       |
-Atmega2560 @ 16MHz |             |             |     X       |
-ATSAM3X8E          |             |             |     X       |
-ATSAM21D           |             |             |     X       |
-ATSAMD51J20        |             |             |     X       |
-ATtiny85 @ 16MHz   |             |             |     X       |
-ATtiny85 @ 8MHz    |             |             |     X       |
-Intel Curie @ 32MHz |            |             |     X       |
-STM32F2            |             |             |     X       |
+|MCU                 | Tested Works | Doesn't Work | Not Tested  | Notes |
+|------------------- | :----------: | :----------: | :---------: | ----- |
+|Atmega328 @ 16MHz   |              |              |     X       |       |
+|Atmega328 @ 12MHz   |              |              |     X       |       |
+|Atmega32u4 @ 16MHz  |              |              |     X       |       |
+|Atmega32u4 @ 8MHz   |              |              |     X       |       |
+|ESP8266             |              |              |     X       |       |
+|Atmega2560 @ 16MHz  |              |              |     X       |       |
+|ATSAM3X8E           |              |              |     X       |       |
+|ATSAM21D            |              |              |     X       |       |
+|ATSAMD51J20         |              |              |     X       |       |
+|ATtiny85 @ 16MHz    |              |              |     X       |       |
+|ATtiny85 @ 8MHz     |              |              |     X       |       |
+|Intel Curie @ 32MHz |              |              |     X       |       |
+|STM32F2             |              |              |     X       |       |
 
 - ATmega328 @ 16MHz : Arduino UNO, Adafruit Pro Trinket 5V, Adafruit Metro 328, Adafruit Metro Mini
 - ATmega328 @ 12MHz : Adafruit Pro Trinket 3V
